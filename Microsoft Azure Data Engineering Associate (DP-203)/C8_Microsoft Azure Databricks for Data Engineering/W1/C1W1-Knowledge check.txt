@@ -1,0 +1,28 @@
+Q.1
+Apache Spark is a unified processing engine that can analyze big data with which of the following features?
+> Graph Processing
+> SQL
+> Machine Learning
+> Real-time stream analysis
+
+Q.2
+Which of the following Databricks features are not Open-Spurce Spark
+> Databricks Runtime
+> Databricks workflows
+
+Q.3
+Apache Spark notebooks allow which of the following?
+> Display graphical visualizations
+> Rendering of formatted text
+
+Q.4
+In Azure Databricks when creating a new Notebook, the default languages available to select from are?
+> Python
+> R
+> SQL
+> Scala
+
+Q.5 If your notebook is attached to a cluster, you can carry out which of the following from within the notebook?
+> Detach your notebook from the cluster
+> Restart the cluster
+> Attach to another cluster
