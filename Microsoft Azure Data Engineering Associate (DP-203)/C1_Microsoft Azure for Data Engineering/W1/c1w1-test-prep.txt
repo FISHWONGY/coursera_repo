@@ -1,0 +1,39 @@
+Q.1
+Moving resources such as servers and services from an on-premises environment to a cloud-based solution will have a benefit on which of the following.
+
+> Both capital and operational expenditure
+
+Q.2
+Which of the following data processing frameworks are used by data engineers to ingest data from an on-premises database to an on-premises data warehouse?
+> Extract, Transform, and Load (ETL)
+
+Q.3
+Unstructured data differs from Structured Data in many features.
+Which of the following are features of Unstructured data?
+> Commonly stored in data lakes
+> Native format
+> Schema-on-read
+
+Q.4
+Data Engineers may sometimes perform ETL process when processing data. The extract may come from many sources including databases, files, and streams. These data sources can have unique data formats including which of the following?
+> Semi-structured
+> Unstructured
+> Structured
+
+Q.5
+The Extract Load and Transform (ELT) process has which of the following benefits.
+> Data can be stored in its original format.
+> Reduces the time required to load the data into a destination system.
+
+Q.6
+A Data Engineers scope of work includes the process of getting, ingesting, transforming, validating, and cleaning up data to meet business requirements. Which of the following terms describe this process?
+> Data Wrangling
+
+Q.7
+Which data processing framework will a data engineer use to ingest data onto cloud data platforms in Azure?
+> ELT
+
+Q.8
+Data Engineers may sometimes perform ETL process when processing data. The extract may come from many sources including databases, files, and streams. As part of the Extract process which of the following information must be supplied?
+> Define the Data Source
+> Define the data
