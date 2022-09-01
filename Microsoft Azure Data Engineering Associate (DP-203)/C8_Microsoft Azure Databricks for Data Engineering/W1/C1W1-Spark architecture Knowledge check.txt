@@ -1,0 +1,27 @@
+Q.1
+You work with Big Data as a data engineer or a data scientist, and you must process data that is oftentimes referred to as the “3 Vs of Big Data”. What do the 3Vs of Big Data stand for?
+> Volume
+>Variety
+>Velocity
+
+Q.2
+Spark's performance is based on parallelism. Which of the following Scalability methods is limited to a finite amount of RAM, Threads and CPU speeds?
+>Verical Scalling
+
+Q.3
+In an Apache Spark Cluster jobs are divided into which of the following?
+>Tasks
+
+Q.4
+When creating a new cluster in the Azure Databricks workspace, which of the following is a sequence of steps that happens in the background?
+
+>Azure Databricks creates a cluster of driver and worker nodes, based on your VM type and size selections.
+
+Q.5
+To parallelize work, the unit of distribution is a Spark Cluster. Every Cluster has a Driver and one or more executors. Work submitted to the Cluster is split into what type of object?
+>Jobs
+
+Q.6
+Spark Cluster use two levels of parallelization. Which of the following are levels of parallelization?
+>Executor
+>slot

@@ -1,0 +1,38 @@
+Q.1 Azure Databricks Runtime adds several key capabilities to Apache Spark workloads that can increase performance and reduce costs. Which of the following are features of Azure Databricks?
+>Auto-scaling and auto-termination
+>Caching
+>Indexing
+X parallel
+
+Q.2 Apache Spark supports which of the following languages?
+>Scala
+>Python
+>Java
+
+Q.3 Which of the following statements are True
+>To use your Azure Databricks notebook to run code, you must attaach it to a cluster
+>You can detach a notebook from a cluster and attach it to another cluster.
+
+Q.4 Which of the following Databricks features are not Open-Source Spark?
+>Databricks Runtime
+>Databricks Workflows
+>Databricks Workspace
+
+Q.5 Which of the following Databricks features are not Open-Source Spark?
+>Only one
+
+Q.6 Which of the following Databricks features are not Open-Source Spark?
+>Java processes
+
+Q.7 You work with Big Data as a data engineer, and you must process real-time data. This is referred to as having which of the following characteristics?
+>High Velocity
+
+Q.8 Spark's performance is based on parallelism. Which of the following Scalability methods is limited to a finite amount of RAM, Threads and CPU speeds?
+>Vertical Scalling
+
+Q.9 Spark Cluster use two levels of parallelization. Which of the following are levels of parallelization?
+>Executor
+>Slot
+
+Q.10 In an Apache Spark Cluster jobs are divided into which of the following?
+>Tasks
