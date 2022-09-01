@@ -1,0 +1,49 @@
+Q.1 In Azure Synapse Analytics, the Data Movement Service (DMS) coordinates and transports data between compute nodes as necessary. Azure Synapse Analytics supports which types of distributed tables.
+X Relational DB
+>Round Robin
+>Replicated
+>Hash
+
+
+Q.2 Data that is continuously sent to a system for further processing in real-time is an example of which of the following data types?
+>Streaming Data
+
+Q.3 Which of the following is an example of unstructured data?
+>Audio Files
+
+Q.4 Which one of the following is a benefit of using the Azure SQL Database cloud-based Platform-as-a-Service (PaaS) service rather than on-premises database management systems?
+X manage cost
+
+Q.5 Which Cosmos DB API works with Graph Databases?
+>Gremlin
+
+Q.6 Which storage solution supports role-based access control (RBAC) at the file and folder level?
+>Azure Data Lake Storage
+
+Q.7 What is the purpose of data ingestion?
+> To capture data flowing into a data warehouse as quickly as possible.
+
+Q.8 Data Engineers configure ingestion components of Azure Stream Analytics by configuring data inputs from sources including Azure Event Hubs, Azure IoT Hub, or Azure Blob storage.
+Which of the following is a feature of Azure Event Hub?
+>Big data streaming Serivce
+
+Q.9 Nonstructured data is stored in nonrelational systems, commonly called unstructured or NoSQL systems. Which of the following are types of NoSQL databases?
+X relational
+>Key-value store
+>Column database
+>Document databases
+>Graph databases
+
+
+Q.10 Which of the following is not a data job role?
+>System Admin
+
+Q.11 Which of the following services in Microsoft Azure are used to process data?
+>Event Hub
+X Stream Analytics Job
+
+Q.12 Which of the following is a cloud integration service that orchestrates the movement of data between various data stores?
+X Azure Synapse Analytics
+
+Q.13 Azure HDInsight provides technologies for ingesting, processing, and analyzing big data to support batch processing, data warehousing, IoT, and Data Science. Which of the following technologies integrated into HDInsight provides a NoSQL database built upon Hadoop commonly used for search engines and includes automatic failover?
+>Apache HBase
