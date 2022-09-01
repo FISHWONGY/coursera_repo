@@ -1,0 +1,24 @@
+Q.1 High-availability systems must be available most of the time. Service-level agreements (SLAs) specify your organization's availability expectations. System uptime can be expressed as three nines, four nines, or five nines. These expressions indicate system uptimes of 99.9 percent, 99.99 percent, or 99.999 percent.
+>8.76 Hours
+
+Q.2
+Which of the following terms describes the final cost of owning a given technology and includes the following costs:
+Hardware
+Software Licensing
+Labor
+Datacenter overhead (power, telecommunications, building, heating and cooling)
+
+X RTO,RPO
+
+Q.3 Azure supports both structured and unstructured data. Unstructured data in Azure would commonly be held in which of the following?
+>Azure Cosmo DB
+
+Q.4 The term lift and shift  is used when migrating physical or virtualized servers from an on-premises environment to a Microsoft Azure virtual machine cloud-based environment without the need to rearchitect the application.
+>Higher Availability
+>Lower operational costs
+
+Q.5 The schema of what data type can be defined at query time.
+>Unstructured data
+
+Q.6 Which cloud technical requirement is met by duplicating customer content for redundancy and meeting service-level agreements (SLAs) in Azure?
+>High Availability

@@ -1,0 +1,21 @@
+Q.1 As data processing techniques change with technology, new roles are starting to appear. These roles provide specialized skills to help streamline the data engineering process. Which of the following roles have been identified as new roles in modern data Projects?
+>DS
+>DE
+>AI Engineer
+
+Q.2 The role of a Data Engineer includes which of the following tasks?
+>Manage, monitor, and ensure the security and privacy of data to satisfy business needs.
+>Using services and tools to ingest, egress, and transform data from multiple sources.
+
+Q.3 Data Engineers may sometimes perform ETL process when processing data. The extract may come from many sources including databases, files, and streams. As part of the Extract process which of the following information must be supplied?
+>Define the data
+>Define the Data Source
+
+Q.4 In Microsoft Azure, Data Engineers will use several tools to perform ETL processes. Which of the following tools will commonly be used to perform ETL processes in Azure?
+>Azure Data factory
+
+Q.5 Which role works with Azure Cognitive Services, Cognitive Search, and the Bot Framework?
+>AI Engineer
+
+Q.6 Which Azure data platform is commonly used to process data in an ELT framework?
+>Azure Data factory
