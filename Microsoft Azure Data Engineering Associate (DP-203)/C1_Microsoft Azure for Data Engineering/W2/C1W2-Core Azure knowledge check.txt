@@ -1,0 +1,21 @@
+Q.1 Azure provides many data platform technologies to meet the needs of common data varieties. In relational database systems like Microsoft SQL Server which of the following types of data structures is used?
+>Structured data
+
+Q.2 Nonstructured data is stored in nonrelational systems, commonly called unstructured or NoSQL systems. Which of the following are types of NoSQL databases?
+>Column store DB
+>Key-value sotre
+>Graph Database
+
+Q.3 You need to provision a data store that will store but not query data. You also want to avail of the cheapest storage option. Which of the following is most suitable in this scenario?
+>Azure Blob
+
+Q.4 Azure Data Lake Storage Gen 2 is designed to store massive amounts of data for big-data analytics. Which of the following are features of Azure Data Lake?
+>Security support for access control lists (ACLs)
+>Hadoop compatibility
+>Unlmiited Scalability
+
+Q.5 Which data platform technology is a globally distributed, multi model database that can perform queries in less than a second?
+>Azure Cosmo DB
+
+Q.6 Which Azure service is the best choice to store documentation about a data source?
+>Azure Data Catalog

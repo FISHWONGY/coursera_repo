@@ -1,0 +1,12 @@
+Q.1 Synapse SQL offers both serverless and dedicated resource models to work with both descriptive and diagnostic analytical scenarios. To provide predictable performance and cost you should create which of the following.
+>Dedicated SQL pools
+
+Q.2 Azure Synapse Pipelines leverages the capabilities of Azure Data Factory and is a cloud-based solution for which of the following types of data ingestion and transformation?
+>ETL
+
+Q.3 Azure Stream Analytics is a perfect solution to implement when your data is which of the following types?
+>Real-time Analysis
+
+Q.4 Data Engineers configure ingestion components of Azure Stream Analytics by configuring data inputs from sources including Azure Event Hubs, Azure IoT Hub, or Azure Blob storage.
+>Partitioned consumer model
+>Big data streaming service
