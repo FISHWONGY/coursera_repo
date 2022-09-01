@@ -1,0 +1,18 @@
+Q.1 Which of the following SparkSession functions returns a DataFrameReader
+>.read(..)
+
+Q.2 When using a notebook and a spark session. We can read a CSV file.
+Which of the following can be used to view the first couple of thousand characters of a file
+>%fs head /mnt/training/wikipedia/pageviews/pageviews_by_second.tsv
+
+Q.3 Which DataFrame method do you use to create a temporary view?
+>createOrReplaceTempView()
+
+Q.4 How do you define a DataFrame object?
+>Introduce a variable name and equate it to something like myDataFrameDF =
+
+Q.5 How do you cache data into the memory of the local executor for instant access?
+>.cache()
+
+Q.6 What is the Python syntax for defining a DataFrame in Spark from an existing Parquet file in DBFS?
+>IPGeocodeDF = spark.read.parquet("dbfs:/mnt/training/ip-geocode.parquet")

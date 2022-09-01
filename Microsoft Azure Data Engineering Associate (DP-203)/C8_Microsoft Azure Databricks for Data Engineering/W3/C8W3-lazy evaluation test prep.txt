@@ -1,0 +1,40 @@
+Q.1 When creating a new cluster in Azure Databricks there are three Cluster Modes that can be set. Which of the following are valid Cluster Modes?
+> Standard
+>Single Node
+>High Concurrrency
+
+
+Q.2 Which DataFrame method do you use to create a temporary view?
+>createOrReplaceTempView()
+
+Q.3 Which DataFrame method do you use to create a temporary view?
+>Introduce a variable name and equate it to something like myDataFrameDF =
+
+Q.4 How do you cache data into the memory of the local executor for instant access?
+>.cache()
+
+
+Q.5 What is the Python syntax for defining a DataFrame in Spark from an existing Parquet file in DBFS?
+>IPGeocodeDF = spark.read.parquet("dbfs:/mnt/training/ip-geocode.parquet")
+
+
+Q.6  Among the most powerful components of Spark are Spark SQL. At its core lies the Catalyst optimizer. When you execute code, Spark SQL uses Catalyst's general tree transformation framework in four phases. In which order are these phases carried out?
+> 2,1,4,3
+
+Q.7 Which of the following statements describes a wide transformation?
+>A wide transformation requires sharing data across workers. It does so by shuffling data.
+
+
+Q.8 Which of the following statements describes a narrow transformation?
+> Can be applied per partition/worker with no need to share or shuffle data to other workers
+
+
+Q.9 Which feature of Spark determines how your code is executed?
+>Catalyst Optimiser
+
+Q.10 Which feature of Spark of optimization is used in shuffling operations during wide transformations?
+>Tungsten Record Format
+
+
+
+
