@@ -1,0 +1,41 @@
+Q.1 Which of the following formats are supported when importing files into an Azure Databricks notebook,?
+>.scala
+>.dbc
+>.zip
+>.html
+
+Q.2 Examine the following code. From the options below select the correct syntax to complete line 4   which will return an instance of a DataFrame in a Spark notebook in Azure Databricks.
+>.parquet(parquetFile)
+
+Q.3 Examine the following piece of code taken from a notebook in an Azure Databricks.
+Complete line 4  so that 15 rows of data will be displayed, and the columns will not be truncated.
+>sortedDF.show(15, False)
+
+Q.4 Which command will order by a column in descending order?
+>df.orderBy(col("requests").desc())
+
+Q.5 Which command specifies a column value in a DataFrame's filter? Specifically, filter by a productType column where the value is equal to book?
+>df.filter(col("productType") == "book")
+
+Q.6 When using the Column Class, which command filters based on the end of a column value? For example, a column named verb and filtered by words ending with "ing".
+>df.filter(col("verb").endswith("ing"))
+
+Q.7 Which of the listed methods for renaming a DataFrame's column are correct?
+>df.select(col("timestamp").alias("dateCaptured"))
+>df.toDF("dateCaptured")
+
+Q.8 You need to find the average of sales transactions by storefront. Which of the following aggregates would you use?
+>df.groupBy(col("storefront")).avg("completedTransactions")
+
+Q.9 In Azure Databricks you are about to do some ETL on a file you have received from a customer. The file contains data about people, including:
+first, middle, and last names
+gender
+birth date
+Social Security number
+Salary
+You discover that the file contains some duplicate records and you have been instructed to remove any duplicates. The dropDuplicates() command will more than likely create a shuffle. To help reduce the number of post-shuffle partitions which of the following commands should you run?
+>spark.conf.set("spark.sql.shuffle.partitions", 8)
+
+Q.10 You need to change a column name from “dob” to “DateOfBirth” on a spark DataFrame. Which of the following syntax is valid?
+>.withColumnRenamed("dob","DateOfBirth")
+

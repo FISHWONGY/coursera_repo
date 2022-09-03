@@ -1,0 +1,23 @@
+Q.1 Which of the listed methods for renaming a DataFrame's column are correct?
+Select two options.
+>C: df.toDF("dateCaptured")
+>df.select(col("timestamp").alias("dateCaptured"))
+
+Q.2 You need to find the average of sales transactions by storefront. Which of the following aggregates would you use?
+>df.groupBy(col("storefront")).avg("completedTransactions")
+
+Q.3 In Azure Databricks you are about to do some ETL on a file you have received from a customer. The file contains data about people, including:
+first, middle, and last names
+gender
+birth date
+Social Security number
+Salary
+You discover that the file contains some duplicate records and you have been instructed to remove any duplicates. The dropDuplicates() command will more than likely create a shuffle. To help reduce the number of post-shuffle partitions which of the following commands should you run?
+>spark.conf.set("spark.sql.shuffle.partitions", 8)
+
+Q.4 Which of the following syntax will successfully display the year portion for a column named capturedAt and formatted as a Timestamp column?
+>.select( year( col("capturedAt")) )
+
+Q.5 You need to change a column name from “dob” to “DateOfBirth” on a spark DataFrame. Which of the following syntax is valid?
+>.withColumnRenamed("dob","DateOfBirth")
+

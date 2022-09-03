@@ -1,0 +1,23 @@
+Q.1 Which of the following formats are supported when importing files into an Azure Databricks notebook,?
+>.scala
+>.dbc
+>.zip
+>.html
+
+Q.2 Examine the following code. From the options below select the correct syntax to complete line 4   which will return an instance of a DataFrame in a Spark notebook in Azure Databricks.
+>.parquet(parquetFile)
+
+
+Q.3 Examine the following piece of code taken from a notebook in an Azure Databricks.
+Complete line 4  so that 15 rows of data will be displayed, and the columns will not be truncated.
+>sortedDF.show(15, False)
+
+Q.4 Which command will order by a column in descending order?
+>df.orderBy(col("requests").desc())
+
+Q.5 Which command specifies a column value in a DataFrame's filter? Specifically, filter by a productType column where the value is equal to book?
+>df.filter(col("productType") == "book")
+
+Q.6 When using the Column Class, which command filters based on the end of a column value? For example, a column named verb and filtered by words ending with "ing".
+>df.filter(col("verb").endswith("ing"))
+
