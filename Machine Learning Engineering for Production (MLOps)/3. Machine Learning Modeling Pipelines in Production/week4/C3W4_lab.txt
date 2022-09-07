@@ -1,0 +1,41 @@
+Create a storage bucket
+
+Create a bucket using the Cloud Console:
+
+    1. In the Cloud Console, on the Navigation menu, click Cloud Storage.
+
+    2. Click CREATE BUCKET.
+
+    3. Choose a Regional bucket and set a unique name (use your project ID because it is unique). Then, click CREATE.
+
+
+Start a JupyterLab Notebook instance
+
+    1. In the Google Cloud Console, on the Navigation Menu, click Vertex AI > Workbench.
+
+    2. On the Notebook instances page, click NEW NOTEBOOK.
+
+    3. In the Customize instance menu, select TensorFlow Enterprise and choose the version of TensorFlow Enterprise 2.6 (with LTS) > Without GPUs.
+
+    4. In the New notebook instance dialog, for Region, select us-central1, for Zone, select a zone within the selected region, leave all other fields with their default options, and click CREATE.
+
+After a few minutes, the Vertex AI console will display your instance name, followed by Open Jupyterlab.
+
+    5. Click Open JupyterLab. Your notebook is now set up.
+
+
+Clone the sample code
+
+To clone the training-data-analyst notebook in your JupyterLab instance:
+
+    1. In JupyterLab, click the Terminal icon to open a new terminal.
+
+    2. To clone the training-data-analyst repo, type in the following command, and press Enter.
+    git clone https://github.com/GoogleCloudPlatform/training-data-analyst
+
+
+Explore the What-If Tool
+
+    1. Navigate to training-data-analyst > quests > dei and open xgboost_caip_e2e.ipynb.
+    2. Continue the lab in the notebook, and run each cell by clicking the Run ( 4cb1a6d11f9d775d.png) icon at the top of the screen. Alternatively, you can execute the code in a cell with SHIFT + ENTER. Read the narrative and make sure you understand what's happening in each cell.
+
