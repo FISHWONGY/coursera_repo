@@ -1,0 +1,23 @@
+Q.1 The lambda architecture is a big data processing architecture combining both batch and real-time processing methods and features an append-only immutable data source.Which of the following are features of an append-only immutable data source?
+>Data is implicitly ordered by time of arrival
+>Timestamped events are appended to existing events
+>serves as system of record
+
+Q.2 Delta Lake Architecture improves upon the traditional Lambda architecture through a unified pipeline that allows you to combine batch and streaming workflows through a shared filestore with ACID-compliant transactions.
+What do the letters ACID stand for?
+>Atomicity
+>Isolation
+>Consistency
+>Durability
+
+Q.3 In the Delta Lake architecture, the refinement of the data is often referred to as Bronze, Silver and Gold Tables. Which of the following tables provide business level aggregates often used for reporting and Dashboarding?
+>Gold
+
+Q.4 What is a lambda architecture and what does it try to solve?
+>An architecture that splits incoming data into two paths - a batch path and a streaming path. This architecture helps address the need to provide real-time processing in addition to slower batch computations.
+
+Q.5 What command should be issued to view the list of active streams?
+>Invoke spark.streams.active
+
+Q.6 What is required to specify the location of a checkpoint directory when defining a Delta Lake streaming query?
+>.writeStream.format("delta").option("checkpointLocation", checkpointPath) ...

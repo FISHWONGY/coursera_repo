@@ -1,0 +1,18 @@
+Q.1 Delta Lake provides snapshots of data enabling developers to access and revert to earlier versions of data for audits, rollbacks or to reproduce experiments. This functionality is referred to as?
+>Time Travel
+
+Q.2 One of the core features of Delta Lake is performing upserts.
+Which of the following statements is true in regard to Upsert?
+>UpSert is literally TWO operations. Update / Insert
+
+Q.3 When discussing Delta Lake, there is often a reference to the concept of Bronze, Silver and Gold tables. These levels refer to the state of data refinement as data flows through a processing pipeline and are conceptual guidelines. Based on these table concepts the refinements in Silver tables generally relate to
+>Data that is directly queryable and ready for insights
+
+Q.4 What is the Databricks Delta command to display metadata?
+>DESCRIBE DETAIL tableName
+
+Q.5 How do you perform UPSERT in a Delta dataset?
+>Use MERGE INTO my-table USING data-to-upsert
+
+Q.6 What optimization does the following command perform: OPTIMIZE Students ZORDER BY Grade?
+>Ensures that all data backing, for example, Grade=8 is colocated, then rewrites the sorted data into new Parquet files.
