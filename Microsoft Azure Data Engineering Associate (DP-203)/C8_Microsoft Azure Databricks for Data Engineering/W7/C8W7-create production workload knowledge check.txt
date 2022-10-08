@@ -1,0 +1,23 @@
+Q.1 In Azure Databricks when creating a new user access token, the Lifetime setting of the access token can be manually set.
+What is the default Lifetime (Days) value when creating a new access token?
+>90
+
+Q.2 In Azure Databricks when creating a new user access token, the Lifetime setting of the access token can be manually set.
+If the Token Lifetime is unspecified what will be the Lifetime(Days) of the token?
+>Indefinite
+
+Q.3
+In Azure Databricks, personal access tokens can be used for secure authentication to the Databricks API instead of passwords.
+After a new token is generated, it can be viewed by going back to the user settings from where it was generated.
+>False
+
+Q.4 What's the purpose of linked services in Azure Data Factory?
+>To represent a data store or a compute resource that can host execution of an activity
+
+Q.5 How can parameters be passed into an Azure Databricks notebook from Azure Data Factory?
+>Use notebook widgets to define parameters that can be passed into the notebook
+
+Q.6
+What happens to Databricks activities (notebook, JAR, Python) in Azure Data Factory
+if the target cluster in Azure Databricks isn't running when the cluster is called by Data Factory?
+>If the target cluster is stopped, Databricks will start the cluster before attempting to execute

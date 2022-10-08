@@ -1,0 +1,21 @@
+Q.1 Stream processing is where you continuously incorporate new data into Data Lake storage and compute results. Which of the following would be examples of Stream processing?
+>IoT Device Data
+>Game play events
+>Bank Card Processing
+
+Q.2 When creating a new event hub in the Azure Portal you are required to specify a Namespace name. The namespace name must be unique in which of the following?
+>Azure
+
+Q.3 When doing a write stream command, what does the outputMode("append") option do?
+>The append outputMode allows records to be added to the output sink
+
+Q.4 In Spark Structured Streaming, what method should be used to read streaming data into a DataFrame?
+>spark.readStream
+
+Q.5 What happens if the command option("checkpointLocation", pointer-to-checkpoint directory) is not specified?
+> When the streaming job stops, all state around the streaming job is lost, and upon restart, the job must start from scratch.
+
+Q.6 Select the correct option to complete the statement below:
+In Azure Databricks every streaming DataFrame must have a schema. That is the definition of column names and data types. For file based streaming sources the schema is __________.
+
+>User Defined
