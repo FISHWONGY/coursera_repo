@@ -1,0 +1,20 @@
+Q.1
+What are the two prerequisites for connecting Azure Databricks with Azure Synapse Analytics that apply to the Azure Synapse Analytics instance?
+>Create a database master key and configure the firewall to enable Azure services to connect
+
+Q.2 Which of the following is the correct syntax for overwriting data in Azure Synapse Analytics from a Databricks notebook?
+>df.write.format("com.databricks.spark.sqldw").mode("overwrite").option("...").option("...").save()
+
+Q.3 The Azure Synapse Connector uses Azure Blob Storage as intermediary storage and using PolyBase in Synapse enables MPP reads and writes to Synapse from Azure Databricks. However, the Synapse connector is more suited to ETL than to interactive queries. For interactive and ad-hoc queries, data should be extracted into which of the following?
+>Azure Databricks Delta table
+
+Q.4 You can access Azure Synapse from Databricks using the Azure Synapse connector which uses three types of network connections.
+Which of the following connections are used by Synapse Connector?
+>Spark driver to Azure Synapse
+>Spark driver and executors to Azure storage account
+>Azure Synapse to Azure storage account
+
+Q.5 You can access Azure Synapse from Databricks using the Azure Synapse connector and it is recommended that the connection strings use Secure Sockets Layer (SSL) encryption for all data sent between the Spark driver and the Azure Synapse instance through the JDBC connection. To verify that SSL encryption is enabled, you should verify that which of the following is set in the connection string?
+>encrypt=true
+
+

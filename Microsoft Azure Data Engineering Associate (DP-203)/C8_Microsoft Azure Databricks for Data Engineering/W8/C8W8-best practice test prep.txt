@@ -1,0 +1,35 @@
+Q.1 What does the CD in CI/CD mean?
+>Both are correct
+
+Q.2 What sort of pipeline is required in Azure DevOps for creating artifacts used in releases?
+>A Build Pipeline
+
+Q.3 What steps are required to authorize Azure DevOps to connect to and deploy notebooks to a staging or production Azure Databricks workspace?
+>Create a new Access Token within the user settings in the production Azure Databricks workspace, then use the token as the Databricks bearer token in the Databricks Notebooks Deployment step of the Release pipeline
+
+
+Q.4 What are the two prerequisites for connecting Azure Databricks with Azure Synapse Analytics that apply to the Azure Synapse Analytics instance?
+>Create a database master key and configure the firewall to enable Azure services to connect
+
+
+Q.5 Azure Databricks is a multitenant service and in order to provide fair resource sharing to all regional customers, limits are imposed on API calls. These limits are imposed at which level?
+>The Workspace Level
+
+Q.6 Azure Databricks is a multitenant service and to provide fair resource sharing to all regional customers, it imposes limits on API calls. What is currently the restrictions on the maximum number of notebooks or execution contexts that can be attached to a cluster?
+>1000
+
+Q.7 In Azure Databricks you can deploy more than one Workspace. Best practice is to use the Hub and Spoke Model. Which of the following steps should be carried out to create a best practice Hub and Spoke Model in Azure Databricks?
+>Deploy each Workspace in its own VNet
+>Put all the common networking resources in a central hub Vet, including the custom DNS server
+>Join the Workspace spokes with the central networking hub using VNet Peering
+
+Q.8 Select one of the following options to make this sentence correct:
+Azure Databricks guarantees by default a _______ % uptime SLA
+>99.95
+
+
+Q.9 If mounting an Azure Data Lake Storage (ADLS) account to a workspace, what cluster feature must be used to have ACLs within ADLS applied to the user executing commands in a notebook?
+>Enable ADLS Passthrough on a cluster.
+
+Q.10 What is SCIM?
+>An open standard that enables organizations to import both groups and users from Azure Active Directory into Azure Databricks

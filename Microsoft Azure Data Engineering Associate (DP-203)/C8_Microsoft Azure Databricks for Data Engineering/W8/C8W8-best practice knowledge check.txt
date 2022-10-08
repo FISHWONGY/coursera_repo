@@ -1,0 +1,20 @@
+Q.1
+Select two items from the following options to complete this statement correctly:
+Azure Databricks uses Azure Active Directory (AAD) as the exclusive Identity Provider. Any AAD member assigned to the ________ or ________ role can deploy Databricks and is automatically added to the ADB members list upon first login.
+>Contributor
+>Owner
+
+Q.2 Azure Databricks is a multitenant service and to provide fair resource sharing to all regional customers, it imposes limits on API calls. What is currently the restrictions on the maximum number of notebooks or execution contexts that can be attached to a cluster?
+>150
+
+Q.3 Azure Databricks deployments are built on top of the Azure infrastructure and currently have default restrictions or Azure limits. Currently, what is the maximum number of storage accounts per region per subscription in Azure Databricks?
+>250
+
+Q.4 Azure Databrick jobs use clusters and different types of jobs demand different types of cluster resources. When training machine learning models you should consider using which of the following?
+>Memory optimized VMs
+
+Q.5 What is SCIM?
+>An open standard that enables organizations to import both groups and users from Azure Active Directory into Azure Databricks
+
+Q.6 If mounting an Azure Data Lake Storage (ADLS) account to a workspace, what cluster feature must be used to have ACLs within ADLS applied to the user executing commands in a notebook?
+>Enable ADLS Passthrough on a cluster.
