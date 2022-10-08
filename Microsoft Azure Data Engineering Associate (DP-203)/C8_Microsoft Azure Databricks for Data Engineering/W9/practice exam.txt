@@ -1,0 +1,63 @@
+Q.1 How many drivers does a Cluster have?
+
+Q.2 IN Azure Databricks, what type of process are the driver and the executors?
+>Java processes
+
+Q.3 How do you list files in DBFS within a notebook?
+>%fs ls /my-file-path
+
+Q.4 Which of the following SparkSession functions returns a DataFrameReader?
+>read(..)
+
+Q.5 How do you create a DataFrame object?
+>Introduce a variable name and equate it to something like myDataFrameDF =
+
+Q.6 Which of the following statements describes a wide transformation?
+>A wide transformation requires sharing data across workers. It does so by shuffling data.
+
+Q.7 Which feature of Spark determines how your code is executed?
+Xjava
+
+Q.8 Which command will order by a column in descending order?
+>df.orderBy(col("requests").desc())
+
+Q.9 You need to change a column name from “dob” to “DateOfBirth” on a spark DataFrame. Which of the following syntax is valid?
+>.withColumnRenamed("dob","DateOfBirth")
+
+Q.10 A Microsoft-managed Azure Databricks workspace virtual network (VNet) exists within the customer subscription. Information exchanged between this VNet and the Microsoft-managed Azure Databricks Control Plane VNet is sent over a secure TLS connection using which Ports?
+>Port 22
+>Port 5557
+
+Q.11 You are starting to use Azure Databricks and you want to do specific network customizations, such as deploying Azure Databricks data plane resources in your own VNet. Which of the following will you configure?
+XVNet Peering
+
+Q.12 In which modes does Azure Databricks provide data encryption?
+>At-rest and in-transit
+
+Q.13 What is an Azure Key Vault-backed secret scope?
+>Databricks secret scope that is backed by Azure Key Vault instead of Databricks
+
+Q.14 What size does OPTIMIZE compact small files to?
+>Around 1GB
+
+Q.15 Which of the following can be used to successfully perform an UPSERT in a Delta dataset?
+>Use MERGE INTO my-table USING data-to-upsert
+
+Q.16 What is a lambda architecture and what does it try to solve?
+>An architecture that splits incoming data into two paths - a batch path and a streaming path. This architecture helps address the need to provide real-time processing in addition to slower batch computations.
+
+Q.17 The following example creates a schema.
+dataSchema = "Recorded_At timestamp, Device string, Index long, Model string, User string, _corrupt_record String, gt string, x double, y double, z double"
+In SQL syntax this is referred to as which of the following?
+>Data Definition Language (DDL)
+
+Q.18 In Spark Structured Streaming, what method should be used to read streaming data into a DataFrame?
+>spark.readStream
+
+Q.19  What steps are required to authorize Azure DevOps to connect to and deploy notebooks to a staging or production Azure Databricks workspace?
+>Create a new Access Token within the user settings in the production Azure Databricks workspace, then use the token as the Databricks bearer token in the Databricks Notebooks Deployment step of the Release pipeline
+
+Q.20 What is SCIM?
+>An open standard that enables organizations to import both groups and users from Azure Active Directory into Azure Databricks
+
+
