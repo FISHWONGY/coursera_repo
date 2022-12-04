@@ -1,0 +1,23 @@
+1. BigQuery is a fully managed data warehouse. What does “fully managed” refer to?
+>BigQuery manages the underlying structure for you
+
+2. Which two services does BigQuery provide?
+> Storage and analytics
+
+3. Which pattern describes source data that is moved into a BigQuery table in a single operation?
+>Batch load
+
+4. Which BigQuery feature leverages geography data types and standard SQL geography functions to analyze a data set?
+>Geospatial analysis
+
+5. Data has been loaded into BigQuery, and the features have been selected and preprocessed. What should happen next when you use BigQuery ML to develop a machine learning model?
+> Create the ML model inside BigQuery.
+
+6. In a supervised machine learning model, what provides historical data that can be used to predict future data?
+>Labels
+
+7. You want to use machine learning to group random photos into similar groups. Which should you use?
+>Unsupervised learning, cluster analysis
+
+8. You want to use machine learning to identify whether an email is spam. Which should you use?
+>Supervised learning, logistic regression

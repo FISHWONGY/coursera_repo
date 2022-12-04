@@ -1,0 +1,14 @@
+1. Select the correct streaming data workflow.
+> Ingest the streaming data, process the data, and visualize the results.
+
+2. Which Google Cloud product is a distributed messaging service that is designed to ingest messages from multiple device streams such as gaming events, IoT devices, and application streams?
+> Pub/Sub
+
+3. Which Google Cloud product acts as an execution engine to process and implement data processing pipelines?
+> Dataflow
+
+4. When you build scalable and reliable pipelines, data often needs to be processed in near-real time, as soon as it reaches the system. Which type of challenge might this present to data engineers?
+> Velocity
+
+5. Due to several data types and sources, big data often has many data dimensions. This can introduce data inconsistencies and uncertainties. Which type of challenge might this present to data engineers?
+>Veracity
