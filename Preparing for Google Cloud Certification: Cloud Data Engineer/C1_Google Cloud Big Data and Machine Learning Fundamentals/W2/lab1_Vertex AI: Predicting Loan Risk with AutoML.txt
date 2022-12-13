@@ -1,0 +1,229 @@
+Introduction to Vertex AI
+
+This lab uses Vertex AI, the unified AI platform on Google Cloud to train and deploy a ML model. Vertex AI offers two options on one platform to build a ML model: a codeless solution with AutoML and a code-based solution with Custom Training using Vertex Workbench. You use AutoML in this lab.
+
+In this lab you build a ML model to determine whether a particular customer will repay a loan.
+Task 1. Prepare the training data
+
+The initial Vertex AI dashboard illustrates the major stages to train and deploy a ML model: prepare the training data, train the model, and get predictions. Later, the dashboard displays your recent activities, such as the recent datasets, models, predictions, endpoints, and notebook instances.
+Create a dataset
+
+    1. In the Google Cloud console, on the Navigation menu, click Vertex AI > Datasets.
+
+    2. Click Create dataset.
+
+    3. On the Datasets page, give the dataset a name.
+
+    4. For the data type and objective, click Tabular, and then select Regression/classification.
+
+    5. Click Create.
+
+
+
+Upload data
+
+There are three options to import data in Vertex AI:
+
+    Upload a local file from your computer.
+    Select files from Cloud Storage.
+    Select data from BigQuery.
+
+For convenience, the dataset is already uploaded to Cloud Storage.
+
+    1. For the data source, select Select CSV files from Cloud Storage.
+
+    2. For Import file path, enter:  spls/cbl455/loan_risk.csv
+(Optional) Generate statistics
+
+    1. To see the descriptive statistics for each column of your dataset, click Generate statistics . Generating the statistics might take a few minutes, especially the first time.
+
+    2. When the statistics are ready, click each column name to display analytical charts.
+
+
+
+
+***
+Task 2. Train your model
+
+With a dataset uploaded, you're ready to train a model to predict whether a customer will repay the loan.
+
+    Click Train new model.
+
+Training method
+
+The dataset is called LoanRisk.
+
+    1. For Objective, select Classification.
+
+    You select classification instead of regression because you are predicting a distinct number (whether a customer will repay a loan: 0 for repay, 1 for default/not repay) instead of a continuous number.
+
+    2. Click Continue.
+
+Model details
+
+Specify the name of the model and the target column.
+
+    1. Give the model a name, such as LoanRisk.
+
+    2. For Target column, select Default .
+
+    3. (Optional) Explore Advanced options to determine how to assign the training vs. testing data and specify the encryption.
+
+    4. Click Continue.
+
+Training options
+
+Specify which columns you want to include in the training model. For example, ClientID might be irrelevant to predict loan risk.
+
+    1. Click the minus sign on the ClientID row to exclude it from the training model.
+
+    2. (Optional) Explore Advanced options to select different optimization objectives. For more information about optimization objectives for tabular AutoML models, refer to the Optimization objectives for tabular AutoML models guide.
+
+    3. Click Continue.
+
+Compute and pricing
+
+    1. For Budget, which represents the number of node hours for training, enter 1. Training your AutoML model for 1 compute hour is typically a good start for understanding whether there is a relationship between the features and label you've selected. From there, you can modify your features and train for more time to improve model performance.
+
+    2. Leave early stopping enabled.
+
+    3. Click Start training.
+
+Depending on the data size and the training method, the training can take from a few minutes to a couple of hours. Normally you would receive an email from Google Cloud when the training job is complete. However, in the Qwiklabs environment, you will not receive an email.
+
+To save the waiting for the model training, you download a pre-trained model in Task 5 to get predictions in Task 6. This pre-trained model is the training result following the same steps from Task 1 to Task 2.
+
+
+
+***
+Task 3. Evaluate the model performance (demonstration only)
+
+Vertex AI provides many metrics to evaluate the model performance. You focus on three:
+
+    - Precision/Recall curve
+    - Confusion Matrix
+    - Feature Importance
+
+The confidence threshold determines how a ML model counts the positive cases. A higher threshold increases the precision, but decreases recall. A lower threshold decreases the precision, but increases recall.
+
+You can manually adjust the threshold to observe its impact on precision and recall and find the best tradeoff point between the two to meet your business needs.
+
+
+
+-
+**The confusion matrix**
+
+A confusion matrix tells you the percentage of examples from each class in your test set that your model predicted correctly.
+
+
+The confusion matrix shows that your initial model is able to predict 100% of the repay examples and 87% of the default examples in your test set correctly, which is not too bad.
+
+You can improve the percentage by adding more examples (more data), engineering new features, and changing the training method, etc.
+
+**The feature importance**
+
+In Vertex AI, feature importance is displayed through a bar chart to illustrate how each feature contributes to a prediction. The longer the bar, or the larger the numerical value associated with a feature, the more important it is.
+
+These feature importance values could be used to help you improve your model and have more confidence in its predictions. You might decide to remove the least important features next time you train a model or to combine two of the more significant features into a feature cross to see if this improves model performance.
+
+Feature importance is just one example of Vertex AI’s comprehensive machine learning functionality called Explainable AI. Explainable AI is a set of tools and frameworks to help understand and interpret predictions made by machine learning models.
+
+
+
+***
+Task 4. Deploy the model (demonstration only)
+Create and define an endpoint
+
+    1. On your model registry page, on the Deploy and test tab, click Deploy to endpoint.
+
+    2. For Endpoint name, enter a name for your endpoint, such as LoanRisk
+
+    3. Click Continue.
+
+Model settings and monitoring
+
+    1. Leave the traffic splitting settings as-is.
+
+    2. As the machine type for your model deployment, under Machine type, select n1-standard-8, 8 vCPUs, 30 GiB memory.
+
+    3. Click Continue.
+
+    4. In Model monitoring, click Continue.
+
+    5. In Model objectives > Training data source, select Vertex AI dataset.
+
+    6. Select your dataset from the drop down menu.
+
+    7. In Target column, enter Default
+
+    8. Leave the remaining settings as-is and click Deploy.
+
+Your endpoint will take a few minutes to deploy. When it is completed, a green check mark will appear next to the name.
+
+Now you're ready to get predictions on your deployed model.
+
+
+
+***
+Task 5. SML Bearer Token
+Retrieve your Bearer Token
+
+To allow the pipeline to authenticate, and be authorized to call the endpoint to get the predictions, you will need to provide your Bearer Token.
+
+
+    1. Log in to gsp-auth-kjyo252taq-uc.a.run.app.
+
+    2. When logging in, use your student email address and password.
+
+    3. Click the Copy button. This will copy a very long token to your clipboard.
+
+
+
+***
+Task 6. Get predictions
+
+In this section, use the Shared Machine Learning (SML) service to work with an existing trained model.
+
+To use the trained model, you will need to create some environment variables.
+
+    1. Open a Cloud Shell window.
+
+    2. Replace INSERT_SML_BEARER_TOKEN with the bearer token value from the previous section:
+    AUTH_TOKEN="INSERT_SML_BEARER_TOKEN"
+
+    3. Download the lab assets:
+    gsutil cp gs://spls/cbl455/cbl455.tar.gz .
+
+    4. Extract the lab assets:
+    tar -xvf cbl455.tar.gz
+
+    5. Create an ENDPOINT environment variable:
+    ENDPOINT="https://sml-api-vertex-kjyo252taq-uc.a.run.app/vertex/predict/tabular_classification"
+
+    6. Create a INPUT_DATA_FILE environment variable:
+    INPUT_DATA_FILE="INPUT-JSON"
+
+    7. Test the SML Service by passing the parameters specified in the environment variables.
+
+    8. Perform a request to the SML service:
+    ./smlproxy tabular \
+  -a $AUTH_TOKEN \
+  -e $ENDPOINT \
+  -d $INPUT_DATA_FILE
+
+This query should result in a response similar to this:
+  ```  SML Tabular HTTP Response:
+  2022/01/10 15:04:45 {"model_class":"0","model_score":0.9999981}```
+
+    9. Alter the INPUT-JSON file to test a new scenario:
+
+    10. Test the SML Service by passing the parameters specified in the environment variables.
+
+    11. Edit the file INPUT-JSON and replace the original values.
+
+    12. Perform a request to the SML service:
+    ./smlproxy tabular \
+  -a $AUTH_TOKEN \
+  -e $ENDPOINT \
+  -d $INPUT_DATA_FILE
+

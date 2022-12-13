@@ -1,8 +1,17 @@
-1.
->
+1. Select the correct machine learning workflow.
+> Data preparation, model training, model serving
 
-2.
->
+2. Which stage of the machine learning workflow includes feature engineering?
+> Data preparation
 
-3.
->
+3.Which stage of the machine learning workflow includes model evaluation?
+> Model training
+
+4. A hospital uses Google’s machine learning technology to help pre-diagnose cancer by feeding historical patient medical data to the model. The goal is to identify as many potential cases as possible. Which metric should the model focus on?
+> Recall
+
+5. A farm uses Google’s machine learning technology to detect defective apples in their crop, such as those that are irregular in size or have scratches. The goal is to identify only the apples that are actually bad so that no good apples are wasted. Which metric should the model focus on?
+> Precision
+
+6. Which Vertex AI tool automates, monitors, and governs machine learning systems by orchestrating the workflow in a serverless manner?
+> Vertex AI Pipelines
