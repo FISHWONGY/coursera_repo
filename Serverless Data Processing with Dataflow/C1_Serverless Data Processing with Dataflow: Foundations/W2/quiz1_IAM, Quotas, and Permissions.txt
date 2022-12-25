@@ -1,0 +1,10 @@
+1. You would like to run the following command:
+gcloud dataflow jobs cancel 2021-01-31_14_30_00-9098096469011826084   --region=$REGION
+Which of these roles can be assigned to you for the command to work?
+>Dataflow Developer
+>Dataflow Admin
+
+2. Question 2
+
+Your project’s current SSD usage is 100 TB. You would like to launch a streaming pipeline with shuffle done on the VM. You set the initial number of workers to 5, and the maximum number of workers to 100. What will be your project’s SSD usage when the job launches?
+> 140TB

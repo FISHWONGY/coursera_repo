@@ -1,0 +1,13 @@
+1. The Dataflow Shuffle service is available only for batch jobs.
+> True
+
+2. Which of the following are TRUE about Flexible Resource Scheduling (select ALL that apply) :
+>FlexRS helps to reduce batch processing costs by using advanced scheduling techniques
+>FlexRS leverages a mix of preemptible and normal VMs
+>When you submit a FlexRS job, the Dataflow service places the job into a queue and submits it for execution within 6 hours from job creation.
+
+3. What are the benefits of Dataflow Streaming Engine? Select ALL that apply:
+>Reduced consumption of worker CPU, memory, and storage
+>Lower resource and quota consumption
+>More responsive autoscaling for incoming data variations
+

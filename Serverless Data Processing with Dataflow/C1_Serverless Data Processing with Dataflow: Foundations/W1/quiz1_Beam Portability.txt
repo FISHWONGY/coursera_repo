@@ -1,0 +1,8 @@
+1. Which of the following are benefits of Beam Portability (Select ALL that apply) ?
+>Running pipelines authored in any SDK on any runner
+>Cross-language transforms
+>Implement new Beam transforms using a language of choice and utilize these transforms from other languages
+
+2. What is the Beam Portability Framework?
+>A language-agnostic way to represent pipelines
+>A set of protocols for executing pipelines

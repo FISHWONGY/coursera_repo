@@ -1,0 +1,119 @@
+Overview
+
+In this lab, you will learn to set up IAM permissions and use private IP adresses for your Datafow jobs.
+Objectives
+
+    - Use IAM permissions that affect whether a job can be launched.
+    - Use Private IP addresses for your Dataflow jobs.
+
+
+
+***
+Activate Cloud Shell
+
+Cloud Shell is a virtual machine that contains development tools. It offers a persistent 5-GB home directory and runs on Google Cloud. Cloud Shell provides command-line access to your Google Cloud resources. gcloud is the command-line tool for Google Cloud. It comes pre-installed on Cloud Shell and supports tab completion.
+
+    1. Click the Activate Cloud Shell button (Activate Cloud Shell icon) at the top right of the console.
+
+    2. Click Continue. It takes a few moments to provision and connect to the environment. When you are connected, you are also authenticated, and the project is set to your PROJECT_ID.
+
+Sample commands
+
+    1. List the active account name:
+    ```gcloud auth list```
+
+    output:
+    Credentialed accounts:
+ - google1623327_student@qwiklabs.net
+
+ 2. List the project ID:
+ ```gcloud config list project```
+
+ output:
+ [core]
+project = qwiklabs-gcp-44776a13dea667a6
+
+
+***
+Task 1. Create a Cloud Storage bucket
+
+    1. In Cloud Shell, to set up your variables, run the following command:
+    ```PROJECT=`gcloud config list --format 'value(core.project)'`
+USER_EMAIL=`gcloud config list account --format "value(core.account)"`
+REGION=us-central1```
+
+    2. Create a Cloud Storage bucket:
+    ```gsutil mb -p $PROJECT -b on gs://$PROJECT```
+
+
+***
+Task 2. Launch a Dataflow job
+
+In this task, you try to run a Dataflow job. It will initially fail because of the lack of IAM permissions. After you assign the required role, the job runs successfully.
+
+    1. Firstly, verify the IAM roles associated with the account:
+    ```gcloud projects get-iam-policy $PROJECT  \
+--format='table(bindings.role)' \
+--flatten="bindings[].members" \
+--filter="bindings.members:$USER_EMAIL"
+```
+
+    2. Attempt to launch a Dataflow job:
+    ```gcloud dataflow jobs run job1 \
+--gcs-location gs://dataflow-templates-us-central1/latest/Word_Count \
+--region $REGION \
+--staging-location gs://$PROJECT/tmp \
+--parameters inputFile=gs://dataflow-samples/shakespeare/kinglear.txt,output=gs://$PROJECT/results/outputs
+```
+This will fail as expected because of missing IAM permissions.
+
+    3. Add the Dataflow Admin role to the user account:
+    ```gcloud projects add-iam-policy-binding $PROJECT --member=user:$USER_EMAIL --role=roles/dataflow.admin```
+
+
+    4. Launch the Dataflow job again:
+    ```gcloud dataflow jobs run job1 \
+--gcs-location gs://dataflow-templates-us-central1/latest/Word_Count \
+--region $REGION \
+--staging-location gs://$PROJECT/tmp \
+--parameters inputFile=gs://dataflow-samples/shakespeare/kinglear.txt,output=gs://$PROJECT/results/outputs ```
+
+    5. In the Google Cloud Console, on the Navigation menu, click Dataflow > Jobs, and you will see your dataflow job job1.
+
+
+
+***
+Task 3. Launch in private IPs
+
+In this task, you first try to launch a Dataflow job with the --disable-public-ips directive. It will fail in the first attempt because the network does not have Private Google Access (PGA) turned on. You configure PGA and re-run the command to launch the job.
+
+    1. In Cloud Shell, to launch a Dataflow job using the --disable-public-ips directive, run the following command:
+    ```gcloud dataflow jobs run job2 \
+--gcs-location gs://dataflow-templates-us-central1/latest/Word_Count \
+--region $REGION \
+--staging-location gs://$PROJECT/tmp \
+--parameters inputFile=gs://dataflow-samples/shakespeare/kinglear.txt,output=gs://$PROJECT/results/outputs --disable-public-ips```
+
+This job will fail as expected because PGA is not turned on.
+
+    2. To verify, go to the Google Cloud Console, on the Navigation menu, click Dataflow > Jobs, and notice that job2 failed.
+
+    3. Click on job2, then scroll to the bottom to click on "SHOW" next to Logs to see the cause of error.
+
+    4. In Cloud Shell, run the following commands to give the user the required role to enable PGA, and then enable PGA:
+    ```gcloud projects add-iam-policy-binding $PROJECT --member=user:$USER_EMAIL --role=roles/compute.networkAdmin
+gcloud compute networks subnets update default \
+--region=$REGION \
+--enable-private-ip-google-access```
+
+    5. gcloud dataflow jobs run job2 \
+--gcs-location gs://dataflow-templates-us-central1/latest/Word_Count \
+--region $REGION \
+--staging-location gs://$PROJECT/tmp \
+--parameters inputFile=gs://dataflow-samples/shakespeare/kinglear.txt,output=gs://$PROJECT/results/outputs --disable-public-ips```
+
+
+    6. In the Google Cloud Console, on the Navigation menu, click Compute Engine > VM Instances, and notice that the VM launched has no external IP address.
+
+
+
